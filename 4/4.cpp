@@ -86,17 +86,9 @@ int insert_elem(table* G, product e)
                 }
             i++;
         }
-        i--;
-
-        while (i >= 0)
-        {
-            G->elem[i + 1] = G->elem[i];
-            i--;
-        }
-
-        G->elem[0] = e;
+        
+        G->elem[i] = e;
         G->n++;
-
         return 1;
     }
 
